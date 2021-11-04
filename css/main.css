@@ -1175,7 +1175,7 @@ body {
 
 @media screen and (min-width: 1200px) {
   .footer-address {
-    margin: 0 auto;
+    margin-left: 0;
     margin-right: 70px;
   }
 }
