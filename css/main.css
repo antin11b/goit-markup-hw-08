@@ -1442,7 +1442,7 @@ body {
   margin-bottom: 4px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .works__item-title {
     max-width: 306px;
   }
