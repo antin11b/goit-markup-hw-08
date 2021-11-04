@@ -118,7 +118,6 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   @media screen and (min-width: 1200px) {
     font-size: 14px;
-    letter-spacing: 0.02em;
     padding-top: 28px;
     padding-bottom: 28px;
   }
@@ -233,9 +232,6 @@
 
 .mob-menu-socials__item {
   display: inline-flex;
-  // &:not(:first-child) {
-  //   margin-left: 9px;
-  // }
 }
 
 .mob-menu-socials__link {
@@ -248,16 +244,11 @@
 
 .mob-menu-socials__item:not(:last-child)::after {
   content: '';
-  // position: relative;
-  // display: block;
-  // right: 40px;
-  // top: -36px;
   margin-left: 10px;
   margin-right: 9px;
   width: 1px;
   height: 22px;
   background: rgba(33, 33, 33, 0.2);
-  // border-radius: 2px;
 }
 
 .mob-menu__button {

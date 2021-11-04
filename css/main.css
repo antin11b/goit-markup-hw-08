@@ -606,7 +606,6 @@ body {
 @media screen and (min-width: 1200px) {
   .contacts__link {
     font-size: 14px;
-    letter-spacing: 0.02em;
     padding-top: 28px;
     padding-bottom: 28px;
   }
@@ -1074,13 +1073,6 @@ body {
   margin-left: -15px;
 }
 
-@media screen and (min-width: 768px) {
-  .clients__list {
-    display: flex;
-    flex-wrap: wrap;
-  }
-}
-
 .clients__item {
   flex-basis: calc((100% - 4 * 15px) / 2);
   margin-right: 15px;
@@ -1356,7 +1348,6 @@ body {
 
 @media screen and (min-width: 1200px) {
   .works-filters {
-    display: flex;
     justify-content: center;
     margin-bottom: 35px;
   }
