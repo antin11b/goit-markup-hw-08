@@ -19,7 +19,7 @@
 
 <body>
     <!-- Шапка сайта -->
-    <!-- <header class="header">
+    <header class="header">
         <div class="container header__container">
             <nav class="nav">
                 <a class="logo header__logo" href="./index.html">
@@ -36,28 +36,74 @@
                     </li>
                 </ul>
             </nav>
+            <button class="mob-menu__button js-open-menu">
+                <svg class="mob-menu__icon" width="40" height="40">
+                    <use href="./images/icons.svg#icon-menu-open"></use>
+                </svg>
+            </button>
             <ul class="contacts list">
                 <li class="contacts__item">
-                    <a class="contacts__link link" href="mailto:info@devstudio.com"><svg class="contacts__icon" width="16"
-                            height="12">
+                    <a class="contacts__link link" href="mailto:info@devstudio.com">
+                        <svg class="contacts__icon icon__envelope" width="16" height="12">
                             <use href="./images/icons.svg#icon-envelope"></use>
                         </svg>info@devstudio.com</a>
                 </li>
                 <li class="contacts__item">
-                    <a class="contacts__link link" href="tel:+380961111111"><svg class="contacts__icon" width="10"
-                            height="16">
+                    <a class="contacts__link link" href="tel:+380961111111"><svg class="contacts__icon icon__smartphone"
+                            width="10" height="16">
                             <use href="./images/icons.svg#icon-smartphone"></use>
                         </svg>+38 096 111 11 11</a>
                 </li>
             </ul>
         </div>
-    </header> -->
+        <div class="mob-menu js-menu-container">
+            <button class="mob-menu__button js-close-menu">
+                <svg class="mob-menu__icon" width="40" height="40">
+                    <use href="./images/icons.svg#icon-menu-close"></use>
+                </svg>
+            </button>
+            <ul class="mob-menu__list list">
+                <li class="__item">
+                    <a class="mob-menu__link mob-menu__link--current link" href="./index.html">Студия</a>
+                </li>
+                <li class="__item">
+                    <a class="mob-menu__link link" href="./portfolio.html">Портфолио</a>
+                </li>
+                <li class="__item">
+                    <a class="mob-menu__link link" href="">Контакты</a>
+                </li>
+            </ul>
+            <ul class="mob-menu-contacts__list list">
+                                <li class="mob-menu-contacts__item">
+                                    <a class="mob-menu-contacts__link--tel link" href="tel:+380961111111">+38 096 111 11 11</a>
+                                </li>
+                <li class="mob-menu-contacts__item">
+                    <a class="mob-menu-contacts__link--mail link" href="mailto:info@devstudio.com">
+                        info@devstudio.com</a>
+                </li>
+            </ul>
+            <ul class="mob-menu-socials__list list">
+                <li class="mob-menu-socials__item">
+                    <a class="mob-menu-socials__link link" href="">Instagram</a>
+                </li>
+                <li class="mob-menu-socials__item">
+                    <a class="mob-menu-socials__link link" href="">Twitter</a>
+                </li>
+                <li class="mob-menu-socials__item">
+                    <a class="mob-menu-socials__link link" href="">Facebook</a>
+                </li>
+                <li class="mob-menu-socials__item">
+                    <a class="mob-menu-socials__link link" href="">LinkedIn</a>
+                </li>
+            </ul>
+        </div>
+    </header>
     <main>
         <!-- Герой -->
-        <!-- <section class="hero">
+        <section class="hero">
             <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
             <button class="button hero__button" type="button" data-modal-open>Заказать услугу</button>
-        </section> -->
+        </section>
         <!-- Особенности -->
         <section class="features">
             <div class="container">
@@ -101,22 +147,29 @@
                 <ul class="whatwedo__list list">
                     <li class="whatwedo__item">
                         <div class="whatwedo__wrapper">
-                            <img src="./images/img-01.jpg" alt="Верстальщик делает разметку страницы" width="370"
-                                height="294">
+                            <picture>
+                                <source srcset="./images/desktop/img-01.jpg 1x, ../images/desktop/img-01-2x.jpg 2x" />
+                                <img src="./images/desktop/img-01.jpg" alt="Верстальщик делает разметку страницы">
+                            </picture>
                             <p class="whatwedo__top-text">Десктопные приложения</p>
                         </div>
                     </li>
                     <li class="whatwedo__item">
                         <div class="whatwedo__wrapper">
-                            <img src="./images/img-02.jpg" alt="Дизайнер делает прототипирование мобильного интерфейса"
-                                width="370" height="294">
+                            <picture>
+                                <source srcset="./images/desktop/img-02.jpg 1x, ../images/desktop/img-02-2x.jpg 2x" />
+                                <img src="./images/desktop/img-02.jpg"
+                                    alt="Дизайнер делает прототипирование мобильного интерфейса">
+                            </picture>
                             <p class="whatwedo__top-text">Мобильные приложения</p>
                         </div>
                     </li>
                     <li class="whatwedo__item">
                         <div class="whatwedo__wrapper">
-                            <img src="./images/img-03.jpg" alt="Дизайнер работает с цветовой палитрой" width="370"
-                                height="294">
+                            <picture>
+                                <source srcset="./images/desktop/img-03.jpg 1x, ../images/desktop/img-03-2x.jpg 2x" />
+                                <img src="./images/desktop/img-03.jpg" alt="Дизайнер работает с цветовой палитрой">
+                            </picture>
                             <p class="whatwedo__top-text">Дизайнерские решения</p>
                         </div>
                     </li>
@@ -129,7 +182,18 @@
                 <h2 class="title">Наша команда</h2>
                 <ul class="team__list list">
                     <li class="team__item">
-                        <img src="./images/img-product-designer.jpg" alt="Дизайнер улыбается" width="270" height="260">
+                        <picture>
+                            <source
+                                srcset="./images/desktop/img-product-designer.jpg 1x, ./images/desktop/img-product-designer-2x.jpg 2x"
+                                media="(min-width: 1200px)" />
+                            <source
+                                srcset="./images/tablet/img-product-designer-tab.jpg 1x, ./images/tablet/img-product-designer-tab-2x.jpg 2x"
+                                media="(min-width: 768px)" />
+                            <source
+                                srcset="./images/mobile/img-product-designer-mob.jpg 1x, ./images/mobile/img-product-designer-mob-2x.jpg 2x"
+                                media="(max-width: 767px)" />
+                            <img src="./images/mobile/img-product-designer-mob.jpg" alt="Дизайнер улыбается">
+                        </picture>
                         <div class="team__content">
                             <h3 class="team__subtitle">Игорь Демьяненко</h3>
                             <p class="team__position" lang="en">Product Designer</p>
@@ -166,8 +230,18 @@
                         </div>
                     </li>
                     <li class="team__item">
-                        <img src="./images/img-frontend-developer.jpg" alt="Разработчик улыбается" width="270"
-                            height="260">
+                        <picture>
+                            <source
+                                srcset="./images/desktop/img-frontend-developer.jpg 1x, ./images/desktop/img-frontend-developer-2x.jpg 2x"
+                                media="(min-width: 1200px)" />
+                            <source
+                                srcset="./images/tablet/img-frontend-developer-tab.jpg 1x, ./images/tablet/img-frontend-developer-tab-2x.jpg 2x"
+                                media="(min-width: 768px)" />
+                            <source
+                                srcset="./images/mobile/img-frontend-developer-mob.jpg 1x, ./images/mobile/img-frontend-developer-mob-2x.jpg 2x"
+                                media="(max-width: 767px)" />
+                            <img src="./images/mobile/img-frontend-developer-mob.jpg" alt="Разработчик улыбается">
+                        </picture>
                         <div class="team__content">
                             <h3 class="team__subtitle">Ольга Репина</h3>
                             <p class="team__position" lang="en">Frontend Developer</p>
@@ -204,7 +278,18 @@
                         </div>
                     </li>
                     <li class="team__item">
-                        <img src="./images/img-marketing.jpg" alt="Маркетолог улыбается" width="270" height="260">
+                        <picture>
+                            <source
+                                srcset="./images/desktop/img-marketing.jpg 1x, ./images/desktop/img-marketing-2x.jpg 2x"
+                                media="(min-width: 1200px)" />
+                            <source
+                                srcset="./images/tablet/img-marketing-tab.jpg 1x, ./images/tablet/img-marketing-tab-2x.jpg 2x"
+                                media="(min-width: 768px)" />
+                            <source
+                                srcset="./images/mobile/img-marketing-mob.jpg 1x, ./images/mobile/img-marketing-mob-2x.jpg 2x"
+                                media="(max-width: 767px)" />
+                            <img src="./images/mobile/img-marketing-mob.jpg" alt="Маркетолог улыбается">
+                        </picture>
                         <div class="team__content">
                             <h3 class="team__subtitle">Николай Тарасов</h3>
                             <p class="team__position" lang="en">Marketing</p>
@@ -241,7 +326,18 @@
                         </div>
                     </li>
                     <li class="team__item">
-                        <img src="./images/img-ui-designer.jpg" alt="Дизайнер улыбается" width="270" height="260">
+                        <picture>
+                            <source
+                                srcset="./images/desktop/img-ui-designer.jpg 1x, ./images/desktop/img-ui-designer-2x.jpg 2x"
+                                media="(min-width: 1200px)" />
+                            <source
+                                srcset="./images/tablet/img-ui-designer-tab.jpg 1x, ./images/tablet/img-ui-designer-tab-2x.jpg 2x"
+                                media="(min-width: 768px)" />
+                            <source
+                                srcset="./images/mobile/img-ui-designer-mob.jpg 1x, ./images/mobile/img-ui-designer-mob-2x.jpg 2x"
+                                media="(max-width: 767px)" />
+                            <img src="./images/mobile/img-ui-designer-mob.jpg" alt="Дизайнер улыбается">
+                        </picture>
                         <div class="team__content">
                             <h3 class="team__subtitle">Михаил Ермаков</h3>
                             <p class="team__position" lang="en">UI Designer</p>
@@ -351,8 +447,9 @@
                 <address>
                     <ul class="list">
                         <li class="footer-address__item">
-                            <a class="footer-address__link footer-address__link--white link" href="https://goo.gl/maps/pcFervWkmZ56ZMeA6"
-                                target="_blank" rel="noopener noreferrer">г. Киев,
+                            <a class="footer-address__link footer-address__link--white link"
+                                href="https://goo.gl/maps/pcFervWkmZ56ZMeA6" target="_blank"
+                                rel="noopener noreferrer">г. Киев,
                                 пр-т Леси Украинки, 26</a>
                         </li>
                         <li class="footer-address__item">
@@ -403,7 +500,8 @@
                     <label>
                         <input class="footer-form__input" type="email" name="email" placeholder="E-mail">
                     </label>
-                    <button class="button footer-form__button" type="submit"><span class="footer-form__text">Подписаться</span><svg class="footer-form__icon" width="24"
+                    <button class="button footer-form__button" type="submit"><span
+                            class="footer-form__text">Подписаться</span><svg class="footer-form__icon" width="24"
                             height="24">
                             <use href="./images/icons.svg#icon-send"></use>
                         </svg></button>
@@ -452,7 +550,8 @@
                     <textarea class="modal__text-input" type="text" name="user-comment" id="user-comment"
                         placeholder="Введите текст"></textarea>
                 </div>
-                <input class="modal__checkbox visually-hidden" type="checkbox" name="modal-checkbox" id="modal-checkbox">
+                <input class="modal__checkbox visually-hidden" type="checkbox" name="modal-checkbox"
+                    id="modal-checkbox">
                 <label class="modal__checkbox-label" for="modal-checkbox">
                     <span>
                         <svg width="11" height="8">
@@ -466,7 +565,11 @@
             </form>
         </div>
     </div>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+        integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+        crossorigin="anonymous"></script>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
 </body>
 
 </html>
